@@ -48,3 +48,32 @@ class ListingsSeeder extends Seeder
         ]);
     }
 }
+
+
+// In order to use this seeder to use directly the excel file to import the seeding data, firstly you have to install the PhpOffice/PhpSpreadsheet library
+//using composer and provide the path to the excel file
+
+
+// use Illuminate\Database\Seeder;
+//use Illuminate\Support\Facades\DB;
+//use PhpOffice\PhpSpreadsheet\IOFactory;
+
+//class ListingsTableSeeder extends Seeder
+//{
+//    public function run()
+//    {
+//       $spreadsheet = IOFactory::load('path/to/excel/file.xlsx');
+//       $worksheet = $spreadsheet->getActiveSheet();
+//        $rows = $worksheet->toArray();
+//
+//        foreach ($rows as $row) {
+//            DB::table('listings')->insert([
+//               'type' => $row[1],
+//               'availability' => $row[2],
+//               'location' => $row[3],
+//               'square_metres' => $row[4],
+//               'price' => $row[5],
+//            ]);
+//        }
+//    }
+//}
